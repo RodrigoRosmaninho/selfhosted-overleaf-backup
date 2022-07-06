@@ -50,7 +50,7 @@ In that case, you must also remove the "restart: always" line in your docker-com
 #### BACKUP_OVERWRITE
 When set to "true", the backup tool overwrites previous files on each successful backup.
 
-When set to false, a subfolder is created for each backup operation, thus safeguarding previous files.
+When set to "false", a subfolder is created for each backup operation, thus safeguarding previous files.
 
 ![screenshot](screenshot.png)
 
