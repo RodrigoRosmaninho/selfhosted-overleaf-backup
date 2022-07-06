@@ -1,0 +1,15 @@
+version: '2.4'
+services:
+    overleaf-backup:
+        restart: always  # Remove if BACKUP_FREQUENCY=0
+        user: "${userid}:${userid}"
+        image: ghcr.io/rodrigorosmaninho/selfhosted-overleaf-backup:latest
+        volumes:
+          - /home/your-user/Documents:/backups
+        environment:
+            - OVERLEAF_URL=https://your-overleaf.com
+            - OVERLEAF_USERNAME=you@your-domain.com
+            - OVERLEAF_PASSWORD=your-password
+            - BACKUP_FREQUENCY=60
+            - BACKUP_OVERWRITE=true
+
